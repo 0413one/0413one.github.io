@@ -23,16 +23,6 @@ header a {
   font-weight: bold;
 }
 
-/*底栏*/
-footer {
-  position: fixed;
-  background: rgb(255,255,255,0.8);
-  width: 100vw;
-  bottom: 0px;
-  left: 0px;
-  z-index: 2;
-}
-
 /*板块*/
 .block {
   border-radius: 13px;
