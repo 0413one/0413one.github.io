@@ -2,6 +2,8 @@ body {
   background-color: #f5f5f5;
 }
 
+body { background: red !important; }
+
 /*顶栏*/
 header {
   position: fixed;
