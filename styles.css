@@ -6,7 +6,7 @@ body {
 header {
   position: fixed;
   background: rgb(255,255,255,0.8);
-  height: 55px;
+  height: 50px;
   width: 100vw;
   top: 0px;
   left: 0px;
@@ -15,12 +15,23 @@ header {
 header a {
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
 }
 
 .title3 {
   color: #ffbaba;
   font-size: 26px;
   font-weight: bold;
+}
+
+/*底栏*/
+footer {
+  position: fixed;
+  background: rgb(255,255,255,0.8);
+  width: 100vw;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
 }
 
 /*板块*/
@@ -108,8 +119,62 @@ img {
   border-radius: 13px
 }
 
-/*comment*/
+/**/
 .comment {
   font-size: 12px;
   color: gray;
+}
+
+/*首页文字*/
+.title4 {
+  color:#ffffff;
+  font-size:52px; 
+  top:0; 
+  left:0;
+  width:100%;
+  height:75%; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/*横屏提示*/
+.orientation-mask {
+  position: fixed;
+  inset: 0;
+  background: rgb(255,255,255,0.9);
+  color: #ffbaba;
+  font-weight: bold;
+  z-index: 9999;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.orientation-tip {
+  font-size: 52px;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+@media screen and (orientation: portrait) {
+  .orientation-mask {
+    display: flex;
+  }
+
+  body {
+    overflow: hidden;
+  }
 }
