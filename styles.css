@@ -179,6 +179,10 @@ img {
   }
 }
 
+#hero-line {
+  transition: opacity 0.8s;
+}
+
 /*禁止自动缩放字体*/
 html {
   -webkit-text-size-adjust: 100%; 
