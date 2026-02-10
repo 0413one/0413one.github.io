@@ -5,8 +5,8 @@ body {
 /*顶栏*/
 header {
   position: fixed;
-  background: rgb(255,255,255,0.8);
-  height: 50px;
+  background: rgb(255,255,255,0.9);
+  height: 52px;
   width: 100vw;
   top: 0px;
   left: 0px;
@@ -36,11 +36,19 @@ footer {
 
 /*板块*/
 .block {
-  border-radius: 13px;
+  border-radius: 12px;
   background-color: rgb(255,255,255,0.8);
   padding: 10px;
   margin: 10px 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*颜色边框板块*/
+.block2 {
+  border: 2px solid #ffbaba;
+  border-radius: 13px;
+  padding: 8px;
+  background: #ffffff;
 }
 
 /*全局链接*/
@@ -99,14 +107,6 @@ a {
   border-left: 5px solid #ffbaba;
 }
 
-/*搜索框*/
-.search {
-  border: 2px solid #ffbaba;
-  border-radius: 13px;
-  padding: 8px;
-  background: #ffffff;
-}
-
 /*iframe*/
 iframe {
   border-radius: 13px;
@@ -152,7 +152,7 @@ img {
 .orientation-mask {
   position: fixed;
   inset: 0;
-  background: rgb(255,255,255,0.9);
+  background: rgb(255,255,255,0.95);
   color: #ffbaba;
   font-weight: bold;
   z-index: 9999;
@@ -164,7 +164,7 @@ img {
 }
 
 .orientation-tip {
-  font-size: 36px;
+  font-size: 52px;
   padding: 24px;
   line-height: 1.6;
 }
@@ -199,4 +199,21 @@ html {
   background-repeat: no-repeat;
   min-height: -webkit-fill-available;
   z-index: -1;
+}
+
+/*毛玻璃*/
+.embed-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px;
+}
+
+.embed-glass iframe {
+  border-radius: 12px;
+  background: white;
 }
