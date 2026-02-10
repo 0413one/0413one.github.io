@@ -71,6 +71,23 @@ a {
   color: #ffffff;
 }
 
+.tab3 span {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 8px;
+  height: 28px;
+  background: rgb(256,256,256,0.9);
+  text-align: center;
+  line-height: 26px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.tab3 a {
+  text-decoration: none;
+  color: #ffabab;
+  font-weight: bold;
+}
+
 /*圆形标签*/
 .tab2 span {
   display: inline-block;
@@ -132,7 +149,7 @@ img {
   top:0; 
   left:0;
   width:100%;
-  height:75%; 
+  height:66%; 
   display:flex;
   justify-content:center;
   align-items:center;
