@@ -1,6 +1,28 @@
+//【声明】
+//如使用如下整理的文案库请保留“由 秋林月语Karina.xin 提供”字样
+//提供指文案整理由其提供
+//实现代码由 ChatGPT AI 生成
+//文案属于原作者 仅作用于分享学习交流
+
+//【使用方法】
+//1.在</body>前加入以下两条JS文件 请勿直接使用链接
+//https://karina.xin/hero_sentences.js
+//https://karina.xin/hero_text.js
+
+//2.同时加入以下两段CSS
+//.hero {color:#ffffff;font-size:52px; top:0;left:0;width:100%;height:50%; display:flex;justify-content:center;align-items:center;text-align:center;text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);animation: float 3.5s ease-in-out infinite;will-change: transform;}
+//@keyframes float {
+// 0%   { transform: translateY(0); }
+// 50%  { transform: translateY(-10px); }
+// 100% { transform: translateY(0); }
+//}
+
+//3.最后加入以下HTML
+//<div class="title4" id="hero-line">初始文字</div>
+
 window.HERO_SENTENCES = [
   
-  "该一言功能由 秋林月语 提供",
+  "由 秋林月语Karina.xin 提供",
   "放弃就到此为止啦…",//feb8,2026
   "我们是奇迹",
   "慢一点也没关系",
