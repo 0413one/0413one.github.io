@@ -1,36 +1,23 @@
 //【声明】
-//如使用如下整理的文案库请保留“由 秋林月语Karina.xin 提供”字样
+//如使用如下整理的文案库请保留“该一言由 秋林月语Karina.xin 提供”字样
 //提供指文案整理由其提供
 //实现代码由 ChatGPT AI 生成
 //文案属于原作者 仅作用于分享学习交流
 
-//【使用方法】
-//1.在</body>前加入以下两条JS文件 请勿直接使用链接
-//https://karina.xin/hero_sentences.js
-//https://karina.xin/hero_text.js
-
-//2.同时加入以下两段CSS
-//.hero {color:#ffffff;font-size:52px; top:0;left:0;width:100%;height:50%; display:flex;justify-content:center;align-items:center;text-align:center;text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);animation: float 3.5s ease-in-out infinite;will-change: transform;}
-//@keyframes float {
-// 0%   { transform: translateY(0); }
-// 50%  { transform: translateY(-10px); }
-// 100% { transform: translateY(0); }
-//}
-
-//3.最后加入以下HTML
-//<div class="title4" id="hero-line">初始文字</div>
+//【使用】
+//https://blog.karina.xin/post/dong-tai-sui-ji-wen-zi-jiao-cheng-%28-han-dai-ma-wen-an-%EF%BC%89.html
 
 window.HERO_SENTENCES = [
   
-  "由 秋林月语Karina.xin 提供",
+  "该一言由 秋林月语Karina.xin 提供",
   "放弃就到此为止啦…",//feb8,2026
   "我们是奇迹",
   "慢一点也没关系",
   "知道吗 雪融化的那些天会更冷的",
   "所有人在每一秒都已經死了",
-  "是命运选择了我，我也选择了命运",
+  "是命运选择了我 我也选择了命运",
   "杯子不管有多大水总会溢出来的",
-  "呐，这不就是你翘首以盼的未来吗",
+  "呐 这不就是你翘首以盼的未来吗",
   "不会的事情去做就会了",
   "一整个宇宙 换一颗红豆",
   "右转三次变了左转",
@@ -48,7 +35,7 @@ window.HERO_SENTENCES = [
   "空气里弥漫着被压碎的温柔",
   "恣意探索你的热爱所在",
   "想全都是问题 做全都是答案",
-  "to do",
+  "to do (去做)",
   "永远相信美好的事情即将发生",
   "我望明月月望你",
   "这个世界不向你倾斜 喜欢就别放手",
@@ -67,17 +54,17 @@ window.HERO_SENTENCES = [
   "让我们期待明天会更好",
   "爱到恨我为止",//feb10,2026
   "天天开心",
-  "到了冬天，叹息有了形状",
+  "到了冬天 叹息有了形状",
   "悲伤痛苦的世界 大海是天空的眼泪",
   "AB盘符一直存在",
   "命里有时终须有 命里无时莫强求",
   "姻缘若是卦可改 九世因果化成海",
   "有的人说翻篇了偷偷的折了一个角",
-  "向来如此便对吗？",
+  "向来如此 便对吗",
   "人是漂泊的鸟 爱是宜居的岛",
   "残留在眼角的泪 是你走的痕迹",
   "永远尊重追求自我理想的人",
-  "庭有枇杷树 吾妻死之年所手植",
+  "庭有枇杷树 今已享享如盖",
   "拥抱得笨拙又有什么关系",
   "我愿变成童话里你爱的那个天使",
   "Обернусь я белой кошкой",
@@ -120,7 +107,7 @@ window.HERO_SENTENCES = [
   "抱紧你却抓不住你的爱剩一点点",
   "你会不会忽然的出现在街角的咖啡店",
   "当天边 那颗星出现",
-  "年少的我们曾以为相爱的人就会到永远",
+  "年少的我们曾以为 相爱的人就会到永远",
   "分别总是在九月回忆是思念的愁",
   "期待你发现我的爱",
   "雨下一整晚",
