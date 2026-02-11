@@ -136,7 +136,7 @@ img {
   border-radius: 13px
 }
 
-/**/
+/*注释*/
 .comment {
   font-size: 12px;
   color: gray;
@@ -145,7 +145,7 @@ img {
 /*hero文字*/
 .title4 {
   color:#ffffff;
-  font-size:52px; 
+  font-size:32px; 
   top:0; 
   left:0;
   width:100%;
