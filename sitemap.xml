@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://karina.xin/</loc>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://blog.karina.xin/</loc>
+  <priority>1.00</priority>
+</url>
+
+<url>
+  <loc>https://miniapp.karina.xin/cheese.html</loc>
+  <priority>0.50</priority>
+</url>
+
+<url>
+  <loc>https://miniapp.karina.xin/nyaweb.html</loc>
+  <priority>0.50</priority>
+</url>
+
+<url>
+  <loc>https://miniapp.karina.xin/qy.html</loc>
+  <priority>0.50</priority>
+</url>
+
+</urlset>
