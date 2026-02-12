@@ -31,6 +31,11 @@ h1.title3 {
   line-height: normal;
 }
 
+h1.title3 a {
+  color: #ffbaba;
+  text-decoration: none;
+}
+
 /*底栏*/
 footer {
   position: fixed;
