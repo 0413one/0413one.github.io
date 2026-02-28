@@ -14,16 +14,15 @@ body {
   overflow-y: auto;
 }
 
-/* 瀑布流容器 */
-.masonry-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 16px;
-  grid-auto-rows: 0; /* 关键：不强行对齐 */
-  grid-auto-flow: dense;
+/* 两列瀑布流容器 */
+.friend-grid {
+  column-count: 2;
+  column-gap: 16px;
 }
 
 .friend-card {
+  break-inside: avoid; /* 保证卡片不被截断 */
+  margin-bottom: 16px;
   border-radius: 13px;
   overflow: hidden;
   background: #ffffff;
@@ -31,7 +30,7 @@ body {
   color: #333;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
-  margin-bottom: 16px;
+  display: block;
 }
 
 .friend-card:hover {
@@ -78,9 +77,9 @@ body {
 }
 
 hr {
-  margin: 30px 0;
   border: none;
   border-top: 1px solid #eee;
+  margin: 30px auto;
   width: 50%;
 }
 </style>
@@ -90,24 +89,24 @@ hr {
 
 <h1>Friends.</h1>
 
-<div class="masonry-container" id="topFriends"></div>
+<div class="friend-grid" id="topFriends"></div>
 
 <br>
-<hr align="center" width="50%">
+<hr>
 <br>
 
-<div class="masonry-container" id="normalFriends"></div>
+<div class="friend-grid" id="normalFriends"></div>
 
 <script>
 const friends = [
   {
-    name: "琳•心",
+    name: "琳•心🍥Karina.xin",
     url: "https://karina.xin",
     desc: "放弃就到此为止啦....",
     top: true
   },
   {
-    name: "vegecaiBlog",
+    name: "VegecaiBlog",
     url: "https://kwicaii.moe",
     desc: "守岁花开，季季不同"
   },
