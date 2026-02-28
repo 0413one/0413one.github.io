@@ -14,10 +14,13 @@ body {
   overflow-y: auto;
 }
 
-.friend-grid {
+/* 瀑布流容器 */
+.masonry-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-gap: 16px;
+  grid-auto-rows: 0; /* 关键：不强行对齐 */
+  grid-auto-flow: dense;
 }
 
 .friend-card {
@@ -28,6 +31,7 @@ body {
   color: #333;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s ease;
+  margin-bottom: 16px;
 }
 
 .friend-card:hover {
@@ -42,11 +46,17 @@ body {
   font-size: 48px;
   font-weight: 600;
   background: #fafafa;
-  color: #ffa398;
+  color: #222222;
 }
 
 .friend-content {
   padding: 16px;
+}
+
+.friend-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 .friend-desc {
@@ -66,6 +76,13 @@ body {
   margin-right: 6px;
   vertical-align: middle;
 }
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 1px solid #eee;
+  width: 50%;
+}
 </style>
 </head>
 
@@ -73,13 +90,13 @@ body {
 
 <h1>Friends.</h1>
 
-<div class="friend-grid" id="topFriends"></div>
+<div class="masonry-container" id="topFriends"></div>
 
 <br>
 <hr align="center" width="50%">
 <br>
 
-<div class="friend-grid" id="normalFriends"></div>
+<div class="masonry-container" id="normalFriends"></div>
 
 <script>
 const friends = [
@@ -140,7 +157,6 @@ function createCard(friend) {
   card.target = "_blank";
 
   const firstLetter = friend.name.trim().charAt(0);
-
   const pinLabel = friend.top ? `<span class="pin-label">PIN</span>` : '';
 
   card.innerHTML = `
@@ -156,7 +172,6 @@ function createCard(friend) {
 
 friends.forEach(friend => {
   const card = createCard(friend);
-
   if (friend.top) {
     topContainer.appendChild(card);
   } else {
