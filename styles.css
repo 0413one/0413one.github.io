@@ -246,3 +246,36 @@ html {
   border-radius: 12px;
   background: white;
 }
+
+/*看板娘*/
+.kanban-box{
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  width: 200px;
+  cursor: pointer;
+  z-index: 999;
+
+  transition:transform .4s;
+}
+
+.kanban{
+  width: 100%;
+  transform-origin: 50% 95%;
+  animation: swing 5s ease-in-out infinite;
+}
+
+@keyframes swing{
+  0%{ transform:rotate(-2deg); }
+  50%{ transform:rotate(2deg); }
+  100%{ transform:rotate(-2deg); }
+}
+
+/* 收起状态 */
+.kanban-box.hide{
+  transform:translateX(100px);
+}
+
+.kanban-box:hover{
+  transform:scale(1.05);
+}
