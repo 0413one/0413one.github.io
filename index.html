@@ -6,7 +6,7 @@
   <meta name="author" content="Karina">
   <html lang="zh-CN">
   <link rel="icon" href="IMG_0280.jpeg" type="image/jpeg" sizes="32x32">
-  <link rel="stylesheet" href="styles.css?v=12" type="text/css">
+  <link rel="stylesheet" href="styles.css?v=13" type="text/css">
  </head>
 
  <body>
@@ -23,6 +23,10 @@
    </div>
   </div>
 
+  <div class="kanban-box">
+  <img src="https://raw.githubusercontent.com/0413one/0413one.github.io/refs/heads/main/IMG_2286.png" class="kanban">
+</div>
+
   <header>
    <table border="0" cellspacing="0" height="100%" width="95%" align="center">
     <tbody>
@@ -36,12 +40,11 @@ background: linear-gradient(90deg,#FFBABA,#FFA398);
         &nbsp;&nbsp;
         <a href="https://me.karina.xin">檔案</a> &nbsp; 
         <a href="https://blog.karina.xin" target="main">博客</a> &nbsp; 
-        <a href="" target="main">相冊</a> &nbsp; 
         <a href="https://miniapp.karina.xin">應用</a> &nbsp; 
         <a href="https://www.bilibili.com/blackboard/live/live-activity-player.html?cid=25073544&quality=0" target="main">直播</a> &nbsp; 
         <a href="https://blog.karina.xin/tag.html#invalid" target="main">世界观</a> &nbsp;   
-        <a href="friend.html" target="main">友連結</a>
-        <a href="https://blog.karina.xin">丨行動端</a>
+        <a href="friend.html" target="main">友情連結</a>
+        <a href="https://blog.karina.xin">•移動端打开</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a href="https://blog.karina.xin/tag" target="main">
         <div class="block2" style="width: 120px; display: inline-block; text-align: left;">
@@ -130,7 +133,7 @@ background: linear-gradient(90deg,#FFBABA,#FFA398);
         </div>
        </div>
        <div class="block">
-        <iframe name="main" src="https://blog.karina.xin" width="100%" height="520"></iframe>
+        <iframe name="main" src="https://blog.karina.xin" width="100%" height="550"></iframe>
        </div>
        <div class="block" style="text-align:center;">
          Powered by
@@ -189,6 +192,13 @@ background: linear-gradient(90deg,#FFBABA,#FFA398);
      </tr>
     </table>
    </main>
+  <script>
+   const kanban=document.querySelector(".kanban-box")
+
+kanban.onclick=()=>{
+  kanban.classList.toggle("hide")
+}
+  </script>
   <script src="AmayaBlossoms.js"></script>
   <script src="hero_sentences.js"></script>
   <script src="hero_text.js"></script>
