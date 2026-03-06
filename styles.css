@@ -247,35 +247,29 @@ html {
   background: white;
 }
 
-/*看板娘*/
+/*看板娘-容器控制位置*/
 .kanban-box{
   position: fixed;
   right: 10px;
   bottom: 0;
   width: 250px;
-  cursor: pointer;
   z-index: 999;
-
-  transition:transform .4s;
 }
 
+/*图片动画*/
 .kanban{
-  width: 100%;
-  transform-origin: 50% 95%;
-  animation: swing 5s ease-in-out infinite;
+  width:100%;
+  transform-origin:50% 95%;
+  animation:swing 5s ease-in-out infinite;
+  transition:transform .3s;
 }
 
-@keyframes swing{
-  0%{ transform:rotate(-2deg); }
-  50%{ transform:rotate(2deg); }
-  100%{ transform:rotate(-2deg); }
+/*悬停放大*/
+.kanban:hover{
+  transform:scale(1.05);
 }
 
-/* 收起状态 */
+/*收起*/
 .kanban-box.hide{
   transform:translateX(100px);
-}
-
-.kanban-box:hover{
-  transform:scale(1.05);
 }
