@@ -47,4 +47,9 @@
   <priority>0.50</priority>
 </url>
 
+<url>
+  <loc>https://miniapp.karina.xin/chat.html</loc>
+  <priority>0.50</priority>
+</url>
+
 </urlset>
