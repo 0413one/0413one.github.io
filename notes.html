@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>yominsky</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+#quotes{
+  max-width:700px;
+  margin:auto;
+  padding:20px;
+}
+
+.quote{
+  padding:16px 0;
+  border-bottom:1px solid #eee;
+}
+
+.quote p{
+  margin:0;
+  line-height:1.8;
+}
+
+.com{
+  font-size:12px;
+  color:#999;
+}
+</style>
+
+<div id="quotes"></div>
+
+<script>
+const quotes = [
+{ text:"Test", time:"1970-01-01", more:"Unknown" },
+];
+</script>
+
+<script>
+const container = document.getElementById("quotes");
+
+quotes.forEach(item => {
+
+  const div = document.createElement("div");
+  div.className = "quote";
+
+  div.innerHTML = `
+    <p>${item.text}</p>
+    <span class="com">${item.time}</span>
+    <span class="com">From ${item.more}</span>
+  `;
+
+  container.appendChild(div);
+
+});
+</script>
