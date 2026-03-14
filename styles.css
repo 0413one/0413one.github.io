@@ -8,14 +8,51 @@ header {
   background: rgb(255,255,255,0.9);
   height: 52px;
   width: 100vw;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
-header a {
-  text-decoration: none;
-  color: #000000;
-  font-weight: bold;
+
+/*导航栏*/
+.navbar{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  white-space: nowrap;
+}
+
+/*链接*/
+header a{
+  text-decoration:none;
+  color:#000;
+  font-weight:bold;
+}
+
+/*details不换行*/
+.more{
+  position:relative;
+  display:inline-block;
+}
+
+/*下拉菜单*/
+.dropdown{
+  position:absolute;
+  top:100%;
+  left:0;
+  background:white;
+  border:1px solid #ddd;
+  padding:10px;
+  min-width:120px;
+
+  display:flex;
+  flex-direction:column;
+  gap:6px;
 }
 
 .title3 {
