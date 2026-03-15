@@ -60,4 +60,10 @@
   <priority>0.50</priority>
 </url>
 
+<url> <loc>https://miniapp.karina.xin/equ.html</loc>
+  <priority>0.50</priority>
+</url>
+
+
+
 </urlset>
