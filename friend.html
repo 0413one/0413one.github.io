@@ -1,197 +1,117 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>友链</title>
+<title>申根区-友情连结</title>
 
 <style>
 body {
   margin: 0;
   padding: 20px;
+  background: #89A89E;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  height: auto;
-  overflow-y: auto;
 }
 
-/* 两列瀑布流容器 */
-.friend-grid {
-  column-count: 2;
-  column-gap: 16px;
+/* 网格布局 */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(75px, 1fr));
+  gap: 12px;
 }
 
-.friend-card {
-  break-inside: avoid; /* 保证卡片不被截断 */
-  margin-bottom: 16px;
-  border-radius: 13px;
-  overflow: hidden;
-  background: #ffffff;
+/* 卡片 */
+.app-card {
   text-decoration: none;
-  color: #333;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease;
-  display: block;
+  color: #000000;
+  text-align: center;
 }
 
-.friend-card:hover {
-  transform: translateY(-3px);
-}
+/* 圆形图标 */
+.app-icon {
+  height: 65px;
+  width: 65px;
+  margin: auto;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-.friend-cover {
-  height: 110px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
-  font-weight: 600;
-  background: #fafafa;
-  color: #222222;
-}
 
-.friend-content {
-  padding: 16px;
-}
-
-.friend-title {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
-
-.friend-desc {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #666;
-}
-
-.pin-label {
-  display: inline-block;
-  background: #FFBABA;
-  color: #fff;
-  font-size: 10px;
+  font-size: 24px;
   font-weight: bold;
-  padding: 2px 5px;
-  border-radius: 4px;
-  margin-right: 6px;
-  vertical-align: middle;
+
+  transition: 0.3s;
 }
 
-hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 30px auto;
-  width: 50%;
+.app-icon:hover {
+  transform: scale(1.08);
 }
+
+/* 名称标题 */
+.app-title {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+h1 { 
+  margin-bottom: 0px;
+}
+
+p { 
+  margin-top: 7px;
+  font-weight: bold;
+  color: rgba(0,0,0,0.7);
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>Friends.</h1>
-<div class="friend-grid" id="topFriends"></div>
-<hr>
-<div class="friend-grid" id="normalFriends"></div>
+<h1>Schengen Links.</h1>
+<p>加入成为 @Karina 的申根区会员</p>
+<br>
+
+<div class="app-grid" id="appGrid"></div>
 
 <script>
-const friends = [
-  {
-    name: "Karina.xin🍥琳·心",
-    url: "https://karina.xin",
-    desc: "放弃就到此为止啦....",
-    top: true
-  },
-  {
-    name: "Sakuras.in",
-    url: "https://sakuras.in",
-    desc: "奇迹和魔法都是存在的",
-    top: true
-  },
-  {
-    name: "VegecaiBlog",
-    url: "https://kwicaii.moe",
-    desc: "守岁花开，季季不同"
-  },
-  {
-    name: "寒冰是喵喵",
-    url: "https://blog.hanbings.io",
-    desc: "欢迎来到我的小世界"
-  },
-  {
-    name: "桐高音游部",
-    url: "https://www.inm.wiki",
-    desc: "https://www.inm.wiki"
-  },
-  {
-    name: "石猫博客",
-    url: "https://imshimao.com",
-    desc: "https://imshimao.com"
-  },
-  {
-    name: "青序栈",
-    url: "https://www.qixz.cn",
-    desc: "青序成栈·向简而生"
-  },
-  {
-    name: "Duo 云站",
-    url: "https://www.mduo.cloud",
-    desc: "MathForest官方🌲|程序及数学可视化✨|屑魔女游世界🔮"
-  },
-  {
-    name: "J的个人博客",
-    url: "https://blog.jsoftstudio.top",
-    desc: "分享技术，记录生活"
-  },
-  {
-    name: "自时的小栈（测试版）",
-    url: "https://zsvhc.cc.cd",
-    desc: "个人的一个小网站，还在装修ing..."
-  },
-  {
-    name: "林King社区",
-    url: "https://wyuanlin.top",
-    desc: "内容创作与实时互动平台"
-  },
+const apps = [
+  { name:"karina.xin", url:"https://karina.xin"},
+  { name:"Sakuras.in", url:"https://sakuras.in"},
+  { name:"VegecaiBlog", url:"https://kwicaii.moe"},
+  { name:"寒冰是喵喵", url:"https://blog.hanbings.io"},
+  { name:"桐高音游部", url:"https://www.inm.wiki"},
+  { name:"石猫博客", url:"https://imshimao.com"},
+  { name:"青序栈", url:"https://www.qixz.cn"},
+  { name:"Duo 云站", url:"https://www.mduo.cloud"},
+  { name:"J的个人博客", url:"https://blog.jsoftstudio.top"},
+  { name:"自时的小栈", url:"https://zsvhc.cc.cd"},
+  { name:"林King社区", url:"https://wyuanlin.top"},
 ];
 
-const topContainer = document.getElementById("topFriends");
-const normalContainer = document.getElementById("normalFriends");
+const grid = document.getElementById("appGrid");
 
-function stringToColor(str) {
-  let hash = 0;
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash);
-  }
-  const h = hash % 360;
-  return `hsl(${h}, 60%, 94%)`;
-}
+apps.forEach(app => {
 
-function createCard(friend) {
+  // 自动取第一个字符作为图标
+  const icon = app.name.trim().charAt(0);
+
   const card = document.createElement("a");
-  card.href = friend.url;
-  card.className = "friend-card";
+  card.href = app.url;
+  card.className = "app-card";
   card.target = "_blank";
 
-  const firstLetter = friend.name.trim().charAt(0);
-  const pinLabel = friend.top ? `<span class="pin-label">PIN</span>` : '';
-
   card.innerHTML = `
-    <div class="friend-cover">${firstLetter}</div>
-    <div class="friend-content">
-      <div class="friend-title">${pinLabel}${friend.name}</div>
-      <div class="friend-desc">${friend.desc}</div>
-    </div>
+    <div class="app-icon">${icon}</div>
+    <div class="app-title">${app.name}</div>
   `;
 
-  return card;
-}
-
-friends.forEach(friend => {
-  const card = createCard(friend);
-  if (friend.top) {
-    topContainer.appendChild(card);
-  } else {
-    normalContainer.appendChild(card);
-  }
+  grid.appendChild(card);
 });
 </script>
 
