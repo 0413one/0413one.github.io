@@ -17,6 +17,15 @@ header {
   align-items: center;
 
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+  transform: translateY(-100%);
+  animation: slideDown 0.7s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
 }
 
 /*链接*/
@@ -304,4 +313,46 @@ html {
 /*收起*/
 .kanban-box.hide{
   transform:translateX(100px);
+}
+
+
+/*点击动画*/
+.ripple-global {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255,255,255,0.7);
+  transform: scale(0);
+  animation: ripple-global 0.5s ease-out;
+  z-index: 9999;
+}
+
+@keyframes ripple-global {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/*板块上浮动画*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*果冻板块*/
+.card:active {
+  animation: jelly 0.3s;
+}
+
+@keyframes jelly {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.95, 1.05); }
+  100% { transform: scale(1); }
 }
