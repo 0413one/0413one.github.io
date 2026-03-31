@@ -74,6 +74,8 @@
   <priority>0.50</priority>
 </url>
 
-
+<url> <loc>https://miniapp.karina.xin/orange.html</loc>
+  <priority>0.50</priority>
+</url>
 
 </urlset>
