@@ -23,11 +23,6 @@
 </url>
 
 <url>
-  <loc>https://me.karina.xin/</loc>
-  <priority>1.00</priority>
-</url>
-
-<url>
   <loc>https://resume.karina.xin/</loc>
   <priority>1.00</priority>
 </url>
@@ -77,5 +72,16 @@
 <url> <loc>https://miniapp.karina.xin/orange.html</loc>
   <priority>0.50</priority>
 </url>
+
+<url>
+  <loc>https://miniapp.karina.xin/tili</loc>
+  <priority>0.50</priority>
+</url>
+
+<url>
+  <loc>https://miniapp.karina.xin/day</loc>
+  <priority>0.50</priority>
+</url>
+
 
 </urlset>
