@@ -1,285 +1,358 @@
-<html>
- <head>
-  <title>Karina.xin 琳心🍥琳琳的小窝 - 放弃就到此为止啦....</title>
-  <meta name="description" content="Welcome to Karina's island~">
-  <meta name="keywords" content="小窝,个人主页,博客,档案,个人网站,blog,personal,">
-  <meta name="author" content="Karina,ChatGPT,Doubao">
-  <html lang="zh-CN">
-  <link rel="icon" href="IMG_0280.jpeg" type="image/jpeg" sizes="32x32">
-  <!--由于浏览器原因 强制加上版本号刷新CSS样式-->
-  <link rel="stylesheet" href="styles.css?v=21" type="text/css">
- </head>
+body {
+  background-color: #f5f5f5;
+}
 
- <body>
-<!--背景图片模拟-->
-  <div class="bg-fixed" alt=“背景图片” style="
-  background: url('https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMsARpQBJb6k2tF9djOfMDWNI0zpS7LgAChyYAAismAAFWb0DlUylLvPc2BA.jpeg');
+/*顶栏*/
+header {
+  position: fixed;
+  background: rgb(255,255,255);
+  height: 52px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+  transform: translateY(-100%);
+  animation: slideDown 0.7s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*链接*/
+header a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 0 3px;
+}
+
+/*details不换行*/
+.more{
+  position:relative;
+  display:inline-block;
+}
+
+/*下拉菜单*/
+.dropdown{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(255,255,255,0.9);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title3 {
+  color: #ffbaba;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h1.title3 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  line-height: normal;
+}
+
+h1.title3 a {
+  color: #ffbaba;
+  text-decoration: none;
+}
+
+/*底栏*/
+footer {
+  position: fixed;
+  background: rgb(255,255,255,0.8);
+  width: 100vw;
+  bottom: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+/*板块*/
+.block {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: rgb(255,255,255,0.9);
+  padding: 10px;
+  margin: 10px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*颜色边框板块*/
+.block2 {
+  border: 2px solid #ffbaba;
+  border-radius: 13px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/*全局链接*/
+a {
+  color: #ffa398;
+  text-decoration: none;
+}
+
+/*矩形标签*/
+.tab span {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 4px;
+  background: #ffabab;
+  color: #ffffff;
+  border-radius: 6px;
+}
+.tab a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tab3 span {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 8px;
+  height: 28px;
+  background: rgb(256,256,256);
+  text-align: center;
+  line-height: 26px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.tab3 a {
+  text-decoration: none;
+  color: #ffabab;
+  font-weight: bold;
+}
+
+/*圆形标签*/
+.tab2 span {
+  display: inline-block;
+  margin: 2px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffabab;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+.tab2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*文本*/
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.title2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.title0 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 5px 0px;
+  padding-left: 5px;
+  border-left: 5px solid #ffbaba;
+}
+
+/*iframe*/
+iframe {
+  border-radius: 13px;
+  overflow: hidden;
+  border: none;
+}
+
+/*全局图片*/
+img {
+  border-radius: 13px
+}
+
+/*注释*/
+.comment {
+  font-size: 12px;
+  color: gray;
+}
+
+/*hero文字*/
+.title4 {
+  color:#ffffff;
+  font-size:32px; 
+  top:0; 
+  left:0;
+  width:100%;
+  height:50%; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/*横屏提示*/
+.orientation-mask {
+  position: fixed;
+  inset: 0;
+  background: rgb(255,255,255,0.95);
+  color: #ffbaba;
+  font-weight: bold;
+  z-index: 9999;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.orientation-tip {
+  font-size: 52px;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+@media screen and (orientation: portrait) {
+  .orientation-mask {
+    display: flex;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}
+
+#hero-line {
+  transition: opacity 0.8s;
+}
+
+/*禁止自动缩放字体*/
+html {
+  -webkit-text-size-adjust: 100%; 
+}
+
+/*背景图片*/
+.bg-fixed {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
- "></div>
-
-  <div class="kanban-box">
-  <img src="https://raw.githubusercontent.com/0413one/0413one.github.io/refs/heads/main/IMG_2286.png" class="kanban">
-</div>
-
-<!--顶栏 导航栏-->
-  <header>
-   <nav class="nav">
-    <h1 class="title3" style="
-background: linear-gradient(180deg,#FFA398,#ffbdc7);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-position: relative;
-top: 2px;
-    "> 
-      <a href="index.html">
-       Karina.xin
-      </a>
-     </h1>
-     <a href="http://live.bilibili.com/25073544">Live</a>
-     <a href="https://blog.karina.xin" target="main">Blog</a>
-     <a href="https://miniapp.karina.xin" target="main">Apps</a>
-     <a href="friend.html" target="main">Friends</a>
-     <details class="more">
-      <summary>
-       <b>More</b>
-      </summary>
-      <div class="dropdown">
-        <a href="https://miniapp.karina.xin/file" target="main">資源夾</a>
-        <a href="https://we.karina.xin">让世界更美好</a>
-        <a href="https://blog.karina.xin/rss.xml">訂閱RSS</a>
-        <a href="https://blog.karina.xin">移動端打開</a>
-      </div>
-     </details>
-&nbsp;
-     <a href="https://blog.karina.xin/tag" target="main">
-     <div class="block2" style="width: 111px; display: inline-block; text-align: left;">
-      Search Blog
-     </div>
-    </a>
-   </nav>
-  </header> 
-
-  <br>
-  <main>
-  <br>
-
-<!--动态悬浮文字 以及初始文字-->
-   <div class="title4">
-    <div class="embed-glass card" id="hero-line">
-     Karina.xin • 恣意探索
-    </div>
-   </div>
-
-   <table border="0" width="95%" align="center">
-     <tr>
-      <td align="center" colspan="3">
-      <!--书签栏-->
-       <div class="tab3 reveal">
-          <span> <a href="https://karina.xin">Karina.xin</a> </span> 
-          <span> <a href="https://work.karina.xin">OkeyRain Studio</a> </span> 
-          <span> <a href="https://miniapp.karina.xin/nyaweb">喵喵木盒</a> </span> 
-          <span> <a href="https://miniapp.karina.xin/qy">秋林月語</a> </span>
-          <span> <a href="https://ys.karina.xin">yominsky</a> </span>
-          <span> <a href="https://miniapp.karina.xin" target="main">+ More</a> </span>
-       </div>
-       <br>
-      </td>
-     </tr>
-<!--该站点的各板块 和顶栏一样用表格定位-->
-<!--一行三列 也就是一个tr里面有三个td-->
-<!--详情请见站点展示效果-->
-<!--底栏也就是网页信息也在这一个表格里面-->
-     <tr>
-      <td width="25%" valign="top">
-       <div class="block reveal"><img src="https://karina.xin/IMG_0280.jpeg" width="100%" alt=“头像”>
-        <div class="title"> @Karina 琳琳 </div>
-        <div class="tab2">
-         <span>
-          <a href="https://qm.qq.com/q/8VCB4BTenu">QQ</a>
-         </span>
-         <span>
-          <a href="https://t.me/dakishimeru">TG</a>
-         </span>
-         <span>
-          <a href="mailto:me@karina.xin">电邮</a>
-         </span>
-         <span>
-          <a href="https://miniapp.karina.xin/chat" target="main">更多</a>
-         </span>
-        </div>
-       </div>
-       <div class="block reveal">
-        <div class="title2">
-         Bio丨<a href="https://resume.karina.xin/" target="main">我的简历</a>
-        </div>
-        放弃就到此为止啦....<br>
-        恣意探索<br>
-       </div>
-       <div class="block reveal">
-        <div class="title2">
-         唱片机丨<a href="https://music.apple.com/cn/playlist/%E5%96%9C%E7%88%B1%E7%9A%84%E6%AD%8C%E6%9B%B2/pl.u-AZUxrMg1mz">我喜歡的音乐*</a>
-        </div>
-        <div class="tab2">
-         <span> <a href="https://music.apple.com/cn/playlist/%E6%97%A5%E8%AF%AD-jp/pl.u-9N9L2a3F156Bkp0">JP</a> </span> 
-         <span> <a href="https://music.apple.com/cn/playlist/%E5%8D%8E%E8%AF%AD-cn/pl.u-76oNko6tvV2byD7">CN</a> </span> 
-         <span> <a href="https://music.apple.com/cn/playlist/%E8%8B%B1%E8%AF%AD-en/pl.u-V9D7v0KC37lLWxk">EN+</a> </span> 
-         <span> <a href="https://music.apple.com/cn/playlist/%E8%BD%BB%E9%9F%B3-nu/pl.u-mJy8gW4CNgeRA9M">Inst.</a> </span>
-        </div>
-       </div>
-       <div class="block reveal">
-        <div class="title2">個性标簽</div>
-        <div class="tab">
-         <span>互联网</span>
-         <span>数碼科技</span>
-         <span>网站</span>
-         <span>記梦</span>
-         <span>听音乐</span>
-         <span>玄学哲思</span>
-         <span>絵画</span>
-         <span>日記随筆</span>
-         <span>摘录</span>
-        </div>
-       </div>
-      </td>
-      <td width="50%" valign="top">
-       <div class="block2 reveal">
-        <div class="title2">
-         <a href="https://blog.karina.xin" target="main">Blog</a>://
-         <a href="https://blog.karina.xin/tag.html#documentation" target="main">軌迹</a> /
-         <a href="https://blog.karina.xin/tag.html#question" target="main">回音</a> /
-         <a href="https://blog.karina.xin/tag.html#good%20first%20issue" target="main">科技数碼</a> /
-         <a href="https://blog.karina.xin/tag.html#invalid" target="main">世界观</a> /
-         <a href="https://blog.karina.xin/tag.html#duplicate" target="main">杂談札</a> /
-         <a href="https://blog.karina.xin/post/guan-yu-zhu-zhan-bo-ke-Q%26A.html" target="main">Q&A</a> 
-        </div>
-       </div>
-       <div class="block reveal">
-        <iframe name="main" src="https://blog.karina.xin" width="100%" height="600"></iframe>
-       </div>
-       <div class="block reveal" style="text-align:center;">
-         <a href="mailto:admin@karina.xin">Email</a>&nbsp;
-         <a href="https://karina.xin/friend">Friends</a>&nbsp; 
-         <a href="https://karina.xin/sitemap.xml">SiteMap</a>&nbsp;
-         <a href="https://chii.in/blog/345062">Terms</a>&nbsp;
-         <a href="https://blog.karina.xin/post/Cookies.html">Cookies</a>
-         <br>
-<a href="https://karina.xin">Karina.xin</a>
-由
-<a href="https://github.com/0413one/0413one.github.io">GitHub</a>
-&
-<a href="https://cloudflare.com">Cloudflare</a>
-         提供支持喵
-         <br>
-         &copy;2026 Karina.xin All 
-         <a href="https://blog.karina.xin/post/Copyright.html">Rights</a>
-         Reserved.
-       </div>
-      </td>
-
-      <td width="25%" valign="top">
-       <div class="block reveal">
-        <div class="title2">
-         広播電台
-        </div>
-         •&nbsp;直播 B站16时 抖音暂不播<br>
-         •&nbsp;通知Q群加 <a href="https://qm.qq.com/q/tRiv7TZOX8">922243453</a><br>
-         •&nbsp;支fb红包 <a href="javascript:navigator.clipboard.writeText('UPP16NE79UJ')">UPP16NE79UJ</a><br>
-         •&nbsp;微信公众号 Karina.xin<br>
-        </details>
-       </div>
-
-       <div class="block reveal">
-        <div class="title2">我的收藏夾丨<a href="https://miniapp.karina.xin/file" target="main">文件資源夾</a></div>
-        <div class="tab">
-         <span> <a href="https://www.douban.com/doubanapp/dispatch?uri=/user/291764910/year_archive/all&dt_dapp=1">我的观影*</a> </span>
-         <span> <a href="https://miniapp.karina.xin/qy">我的摘句本</a> </span>
-         <span> <a href="https://miniapp.karina.xin/orange" target="main">我的句子</a> </span>
-         <span> <a href="https://miniapp.karina.xin/tili" target="main">我的时间轴</a> </span>
-        </div>
-       </div>
-
-       <div class="block reveal">
-        <div class="title2">
-         公式
-        </div>
-        <div class="tab2">
-         <span> <a href="https://github.com/0413one">Git</a> </span>
-         <span> <a href="https://space.bilibili.com/413310293?share_medium=android&share_source=copy_link&bbid=XUB25F2B4D225C2882FC993494353B7E43461&ts=1772978933810">B站</a> </span>  
-         <span> <a href="https://v.douyin.com/KZD1_ujwrhk/">抖音</a> </span>
-         <span> <a href="https://mp.qzone.qq.com/u/2607337806?uin=2607337806&is_famous_space=0&brand_flag=0">QZ</a> </span> 
-        </div>
-       </div>
-
-       <div class="block reveal">
-        <div class="title2">喵小店联盟丨<a href="javascript:navigator.clipboard.writeText('UPP16NE79UJ')">支付宝红包码</a></div>
-        <div class="tab">
-         <span> <a href="https://work.karina.xin">OkeyRain Studio</a> </span>
-         <span> <a href="https://pages.goofish.com/sharexy?userid=2217088073920&bft=personal&bfp=%7B%22userId%22%3A%222217088073920%22%7D&ut_sk=1.Z%2FSlBTUC%2BqYDAJl1ncJkLPn%2F_12431167_1770069675396.copy.mypage.2217088073920.2217088073920&type=1&from_kun_share=default&xy_refer=%7B%22campaignId%22%3A1119%2C%22sceneInfo%22%3A%22share.mypage.2217088073920.copy%22%7D&ownerId=878076f18f0a582d76cf133416937b6b&un=5f90023e7269d3ea379a51ef03f56276&share_crt_v=1&un_site=77&spm=a2159r.13376460.0.0&sp_tk=RDRnT1U4dG1selM%3D&cpp=1&shareurl=true&short_name=h.7Hc6WLR&tk=D4gOU8tmlzS&app=macos_safari">闲鱼</a> </span>
-         <span> <a href="https://b23.tv/oidKan3">B站小店</a> </span>
-         <span> <a href="https://www.ifdian.net/a/nyamoe">爱发电</a> </span>
-        </div>
-       </div>
-       <div class="block reveal">
-        <div class="title2">來客足迹丨<a href="https://mapmyvisitors.com/web/1c2ox">査看詳細数据*</a></div>
-        <a href='https://mapmyvisitors.com/web/1c2ox'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=ffbaba&w=a&t=tt&d=rUlDTHwP0n57I0Nridjv3FSaCtNZf-Q3a69ErgCJE20&co=ffffff&ct=000000'/></a>
-        <div class="comment">*該訪客数据來源於第三方</div>
-       </div>
-      </td>
-     </tr>
-    </table>
-   </main>
-
-  <script>
-   const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
-  });
-});
-
-document.querySelectorAll('.reveal').forEach(el => {
-  observer.observe(el);
-});
-  </script>
-
-  <!--点击动画逻辑-->
-  <script>
-   function createRipple(x, y) {
-  const ripple = document.createElement('span');
-  ripple.className = 'ripple-global';
-
-  const size = 80;
-
-  ripple.style.width = ripple.style.height = size + 'px';
-  ripple.style.left = (x - size / 2) + 'px';
-  ripple.style.top = (y - size / 2) + 'px';
-
-  document.body.appendChild(ripple);
-
-  setTimeout(() => {
-    ripple.remove();
-  }, 500);
+  min-height: -webkit-fill-available;
+  z-index: -1;
 }
 
-// 关键：用 pointer
-document.addEventListener('pointerdown', function(e) {
-  createRipple(e.clientX, e.clientY);
-});
-  </script>
-
-  <script>
-   <!--看板娘-->
-   const kanban=document.querySelector(".kanban-box")
-
-kanban.onclick=()=>{
-  kanban.classList.toggle("hide")
+/*毛玻璃*/
+.embed-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px;
 }
-  </script>
-  <script src="AmayaBlossoms.js"></script>
-  <script src="hero_sentences.js"></script>
-  <script src="hero_text.js"></script>
-</body>
-</html>
+
+.embed-glass iframe {
+  border-radius: 12px;
+  background: white;
+}
+
+/*看板娘-容器控制位置*/
+.kanban-box{
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  width: 250px;
+  z-index: 999;
+}
+
+/*图片动画*/
+.kanban{
+  width:100%;
+  transform-origin:50% 95%;
+  animation:swing 5s ease-in-out infinite;
+  transition:transform .3s;
+}
+
+/*悬停放大*/
+.kanban:hover{
+  transform:scale(1.05);
+}
+
+/*收起*/
+.kanban-box.hide{
+  transform:translateX(100px);
+}
+
+
+/*点击动画*/
+.ripple-global {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255,255,255,0.7);
+  transform: scale(0);
+  animation: ripple-global 0.5s ease-out;
+  z-index: 9999;
+}
+
+@keyframes ripple-global {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/*板块上浮动画*/
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.3s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*果冻板块*/
+.card:active {
+  animation: jelly 0.3s;
+}
+
+@keyframes jelly {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.95, 1.05); }
+  100% { transform: scale(1); }
+}
