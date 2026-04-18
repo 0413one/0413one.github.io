@@ -47,7 +47,7 @@ header a{
   position: absolute;
   top: 100%;
   left: 0;
-  background: rgb(255,255,255,0.8);
+  background: rgb(255,255,255,0.9);
   border-radius: 12px;
   border: 1px solid #ddd;
   padding: 10px;
@@ -90,7 +90,7 @@ footer {
 .block {
   border-radius: 12px;
   border: 1px solid #ddd;
-  background-color: rgb(255,255,255,0.8);
+  background-color: rgb(255,255,255,0.9);
   padding: 10px;
   margin: 10px 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
