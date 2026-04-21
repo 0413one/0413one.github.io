@@ -6,8 +6,8 @@
 //【使用】https://blog.karina.xin/post/dong-tai-sui-ji-wen-zi-jiao-cheng-%28-han-dai-ma-wen-an-%EF%BC%89.html
 
 window.HERO_SENTENCES = [
-  
   "该一言由 秋林月语Karina.xin 提供",
+  "关注 @Karina琳琳 谢谢喵",
   "放弃就到此为止啦…",//feb8,2026
   "我们是奇迹",
   "慢一点也没关系",
@@ -335,4 +335,7 @@ window.HERO_SENTENCES = [
   "遇事不决可问春风 春风不语即随本心",//apr17,2026
   "可春风亦有春风愁",
   "恣意探索",
+  "天降大任于斯人也 必将苦其心志 劳其筋骨 饿其体肤",//apr21,2026
+  "无需王座与冠冕 我即是奇迹",
+  "明天你好 含着泪微笑",
 ];
