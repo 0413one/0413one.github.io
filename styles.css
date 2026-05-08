@@ -6,7 +6,7 @@ body {
 header {
   position: fixed;
   background: rgb(255,255,255);
-  height: 52px;
+  height: 55px;
   width: 100vw;
   top: 0;
   left: 0;
@@ -169,7 +169,7 @@ a {
 
 /*iframe*/
 iframe {
-  border-radius: 13px;
+  border-radius: 8px;
   overflow: hidden;
   border: none;
 }
@@ -270,7 +270,6 @@ html {
   transform:translateX(100px);
 }
 
-
 /*点击动画*/
 .ripple-global {
   position: fixed;
@@ -287,18 +286,6 @@ html {
     transform: scale(3);
     opacity: 0;
   }
-}
-
-/*板块上浮动画*/
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.3s ease;
-}
-
-.reveal.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /*果冻板块*/
