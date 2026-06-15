@@ -18,10 +18,8 @@
   background-position: center center;
   background-repeat: no-repeat;
  "></div>
-
-  <div class="kanban-box">
-  <img src="https://raw.githubusercontent.com/0413one/0413one.github.io/refs/heads/main/IMG_2286.png" class="kanban">
-</div>
+ 
+ <div id="sakana-widget"></div>
 
 <!--顶栏 导航栏-->
   <header>
@@ -229,9 +227,18 @@ top: 2px;
      </tr>
     </table>
    </main>
+  
+<script asynconload="initSakanaWidget()" src="https://cdn.jsdelivr.net/npm/sakana-widget@3.0.1/lib/index.umd.min.js"
+>
+  </script>
+  <script src="sakana.js"></script>
+  <script>
+   function initSakanaWidget() {
+    new SakanaWidget().mount('#sakana-widget');
+   }
+  </script>
 
   <script src="age.js"></script>
-  <script src="kanban.js"></script>
   <script src="AmayaBlossoms.js"></script>
   <script src="https://qy.karina.xin/hero_sentences.js"></script>
   <script src="https://qy.karina.xin/hero_text.js"></script>
