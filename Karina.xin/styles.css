@@ -1,0 +1,298 @@
+body {
+  background-color: #f5f5f5;
+}
+
+/*顶栏*/
+header {
+  position: fixed;
+  background: rgb(255,255,255);
+  height: 55px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+  transform: translateY(-100%);
+  animation: slideDown 0.7s ease forwards;
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/*链接*/
+header a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  margin: 0 3px;
+}
+
+/*details不换行*/
+.more{
+  position:relative;
+  display:inline-block;
+}
+
+/*下拉菜单*/
+.dropdown{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgb(255,255,255,0.9);
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  min-width: 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title3 {
+  color: #ffbaba;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h1.title3 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  line-height: normal;
+}
+
+h1.title3 a {
+  color: #ffbaba;
+  text-decoration: none;
+}
+
+/*板块*/
+.block {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: rgb(255,255,255,0.9);
+  padding: 10px;
+  margin: 10px 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*颜色边框板块*/
+.block2 {
+  border: 2px solid #ffbaba;
+  border-radius: 13px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+/*全局链接*/
+a {
+  color: #ffa398;
+  text-decoration: none;
+}
+
+/*矩形标签*/
+.tab span {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 4px;
+  background: #ffabab;
+  color: #ffffff;
+  border-radius: 8px;
+}
+.tab a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.tab3 span {
+  display: inline-block;
+  margin: 2px;
+  padding: 2px 8px;
+  height: 28px;
+  background: rgb(256,256,256);
+  text-align: center;
+  line-height: 26px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.tab3 a {
+  text-decoration: none;
+  color: #ffabab;
+  font-weight: bold;
+}
+
+/*圆形标签*/
+.tab2 span {
+  display: inline-block;
+  margin: 2px;
+  width: 40px;
+  height: 40px;
+  background-color: #ffabab;
+  color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+.tab2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*文本*/
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.title2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0px;
+}
+.title0 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 5px 0px;
+  padding-left: 5px;
+  border-left: 5px solid #ffbaba;
+}
+
+/*iframe*/
+iframe {
+  border-radius: 8px;
+  overflow: hidden;
+  border: none;
+}
+
+/*全局图片*/
+img {
+  border-radius: 8px
+}
+
+/*注释*/
+.comment {
+  font-size: 12px;
+  color: gray;
+}
+
+/*hero文字*/
+.title4 {
+  color:#ffffff;
+  font-size:32px; 
+  top:0; 
+  left:0;
+  width:100%;
+  height:50%; 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/*禁止自动缩放字体*/
+html {
+  -webkit-text-size-adjust: 100%; 
+}
+
+/*背景图片*/
+.bg-fixed {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: -webkit-fill-available;
+  z-index: -1;
+}
+
+/*毛玻璃*/
+.embed-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+  padding: 10px;
+}
+
+.embed-glass iframe {
+  border-radius: 12px;
+  background: white;
+}
+
+/*图片动画*/
+.kanban{
+  width:100%;
+  transform-origin:50% 95%;
+  animation:swing 5s ease-in-out infinite;
+  transition:transform .3s;
+}
+
+/*悬停放大*/
+.kanban:hover{
+  transform:scale(1.05);
+}
+
+/*收起*/
+.kanban-box.hide{
+  transform:translateX(100px);
+}
+
+/*点击动画*/
+.ripple-global {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  background: rgba(255,255,255,0.7);
+  transform: scale(0);
+  animation: ripple-global 0.5s ease-out;
+  z-index: 9999;
+}
+
+@keyframes ripple-global {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/*果冻板块*/
+.card:active {
+  animation: jelly 0.3s;
+}
+
+@keyframes jelly {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.95, 1.05); }
+  100% { transform: scale(1); }
+}
+
+#sakana-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
