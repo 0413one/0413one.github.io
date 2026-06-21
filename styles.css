@@ -5,30 +5,40 @@ body {
 /*顶栏*/
 header {
   position: fixed;
-  background: rgb(255,255,255);
-  height: 55px;
-  width: 100vw;
   top: 0;
   left: 0;
+  right: 0;
+  height: 45px;
+  background: #fff;
   z-index: 2;
-
   display: flex;
-  justify-content: center;
   align-items: center;
-
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
   transform: translateY(-100%);
   animation: slideDown 0.7s ease forwards;
 }
 
-@keyframes slideDown {
-  to {
-    transform: translateY(0);
-  }
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+  display: flex;
 }
 
-/*链接*/
+header::after {
+  background-image: radial-gradient(circle 6px at 50% 0, #fff 100%, transparent 0);
+  background-size: calc(100% / 100) 10px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+@keyframes slideDown {
+  to {transform: translateY(0);}
+}
+
 header a{
   text-decoration: none;
   color: #000;
