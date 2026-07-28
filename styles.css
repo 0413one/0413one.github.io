@@ -19,6 +19,26 @@ header {
   animation: slideDown 0.7s ease forwards;
 }
 
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+  display: flex;
+}
+
+header::after {
+  background-image: radial-gradient(circle 6px at 50% 0, #fff 100%, transparent 0);
+  background-size: calc(100% / 100) 10px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+@keyframes slideDown {
+  to {transform: translateY(0);}
+}
+
 header a{
   text-decoration: none;
   color: #000;
@@ -125,8 +145,8 @@ a {
 .tab2 span {
   display: inline-block;
   margin: 2px;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #ffabab;
   color: #ffffff;
   border-radius: 50%;
